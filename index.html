@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annetflix</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <link rel="icon" href="img/img.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a id="logo" class="logo__img" href="#">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li class="menu__item"><a href="#">About</a></li>
+                <li id="films" class="menu__item"><a href="./index.html">Films</a></li>
+                <li id="favorites" class="menu__item"><a href="#">Favorites</a></li>
+                <li class="menu__item"><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <div class="search">
+            <div class="box">
+                <div class="container">
+                    <span id="searchBtn" class="icon"><i class="fa fa-search"></i></span>
+                    <input type="search" id="search" placeholder="Search films..." />
+                </div>
+            </div>
+        </div>
+
+        <div class="logout">
+            <p id="username"></p>
+            <a id="singout" href="./singIn.html">Sing Out</a>
+        </div>
+    </header>
+
+    <main>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="filmName"></h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="content">
+                        <div id="filmImg"></div>
+
+                        <div id="content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="select">
+            <select id="selectGenres">
+                <option value="All">All</option>
+                <option value="Drama">Drama</option>
+                <option value="Crime">Crime</option>
+            </select>
+
+            <select id="selectLang">
+                <option value="All">All</option>
+                <option value="English">English</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Russian">Russian</option>
+            </select>
+
+            <select id="amountFilms">
+                <option value="10">All</option>
+                <option value="2">2</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+            </select>
+        </div>
+
+        <div class="pagination">
+            <ul id="filmsList"></ul>
+            <div id="pagination" class="pagination-nums">
+                <span id="prevButton">&#8592;</span>
+                <span id="pageNumber"></span>
+                <span class="pageButton" id="nextButton">&#8594;</span>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="controllers/pagination.js"></script>
+    <script type="module" src="model/model.js"></script>
+    <script type="module" src="controllers/favorites.js"></script>
+    <script type="module" src="controllers/search.js"></script>
+    <script type="module" src="controllers/modal.js"></script>
+    <script type="module" src="controllers/singIn/singOut.js"></script>
+</body>
+</html>
