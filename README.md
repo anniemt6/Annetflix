@@ -3,6 +3,7 @@ Film service.
 
 This is a service for finding and watching films. In no case a plagiarism of Netflix. Not the same, only the original. 
 
+♡ A registration and authorisation form is available.
 
 ♡ Implemented "Films" and "Favorites" pages. All films are displayed in "Films" and those we've liked by clicking the heart button are displayed in "Favorites". 
 
