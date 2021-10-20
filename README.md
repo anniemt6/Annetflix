@@ -1,5 +1,5 @@
 # Annetflix
-Film service. 
+Films service. 
 
 This is a service for finding and watching films. In no case a plagiarism of Netflix. Not the same, only the original. 
 
