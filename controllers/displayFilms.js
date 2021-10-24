@@ -7,10 +7,7 @@ const removeFromFav = function (filmsArr, film) {
 }
 
 const isInArray = function (id, filmsArr) {
-    if (filmsArr.find(elem => elem.id === id)) {
-        return true;
-    }
-    return false;
+    return filmsArr.some(elem => elem.id === id);
 }
 
 const addOrRemoveFromFavorites = function (id, film) {
@@ -30,7 +27,7 @@ const addOrRemoveFromFavorites = function (id, film) {
 }
 
 const makeLikeButtonColor = function (film, button) {
-    let favFilms = JSON.parse(localStorage.getItem('Film'));
+    let favFilms = JSON.parse(localStorage.getItem('Film')) || [];
 
     if (isInArray(film.id, favFilms)) {
         button.className = 'liked';
